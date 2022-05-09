@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="userName">Username: </label>
+                <input class="form-control" id="userName" type="text" formControlName="userName">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input class="form-control" id="password" type="text" formControlName="password">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary" (click)="submitLoginForm()" [disabled]="!loginForm.valid">Login</button>
+            <div>
+                <a href="">Register</a> &nbsp;&nbsp;&nbsp;
+                <a href="">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</form>
